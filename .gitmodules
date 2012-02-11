@@ -64,3 +64,9 @@
 [submodule ".vim/bundle/Gundo"]
 	path = .vim/bundle/Gundo
 	url = http://github.com/vim-scripts/Gundo.git
+[submodule ".vim/bundle/supertab"]
+	path = .vim/bundle/supertab
+	url = http://github.com/ervandew/supertab.git
+[submodule ".vim/bundle/rubycomplete.vim"]
+	path = .vim/bundle/rubycomplete.vim
+	url = http://github.com/vim-scripts/rubycomplete.vim.git

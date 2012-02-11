@@ -22,6 +22,7 @@ set showcmd
 filetype plugin indent on
 
 " ##### COMPLETION
+set ofu=syntaxcomplete#Complete
 
 " Better command-line completion
 set wildmenu
@@ -291,6 +292,11 @@ endif
 endfunc 
 
 
+"PLUGIN SETTINGS
+
+let g:SuperTabDefaultCompletionType = "context"
+
+
 
 " PLUGIN MAPPINGS
 
@@ -299,6 +305,9 @@ nnoremap <silent> <F8> :TagbarToggle<cr>
 
 " NERDTree
 map <leader>n :NERDTreeToggle<CR>
+
+" toggle the Gundo window
+map <leader>g :GundoToggle<cr>
 
 " most recent files
 map <leader>r :Mru<cr>
@@ -312,6 +321,13 @@ nmap <leader>ys :YRShow<cr>
 autocmd filetype php set expandtab
 
 " RoR
+let g:rubycomplete_rails = 1
 autocmd FileType html set filetype=html.eruby-rails.eruby
 autocmd FileType ruby set filetype=ruby.ruby-rails
-
+"ruby
+autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+"improve autocomplete menu color
+highlight Pmenu ctermbg=238 gui=bold
