@@ -16,3 +16,42 @@
 [submodule ".vim/bundle/repeat.vim"]
 	path = .vim/bundle/repeat.vim
 	url = http://github.com/tpope/vim-repeat.git
+[submodule ".vim/bundle/commandT"]
+	path = .vim/bundle/commandT
+	url = http://github.com/wincent/Command-T.git
+[submodule ".vim/bundle/nerdtree"]
+	path = .vim/bundle/nerdtree
+	url = http://github.com/scrooloose/nerdtree.git
+[submodule ".vim/bundle/yankring"]
+	path = .vim/bundle/yankring
+	url = http://github.com/chrismetcalf/vim-yankring.git
+[submodule ".vim/bundle/snipmate"]
+	path = .vim/bundle/snipmate
+	url = http://github.com/garbas/vim-snipmate.git
+[submodule ".vim/bundle/tlib"]
+	path = .vim/bundle/tlib
+	url = http://github.com/tomtom/tlib_vim.git
+[submodule ".vim/bundle/mw-utils"]
+	path = .vim/bundle/mw-utils
+	url = http://github.com/MarcWeber/vim-addon-mw-utils.git
+[submodule ".vim/bundle/mru.vim"]
+	path = .vim/bundle/mru.vim
+	url = http://github.com/vim-scripts/mru.vim.git
+[submodule ".vim/bundle/delimitMate"]
+	path = .vim/bundle/delimitMate
+	url = http://github.com/Raimondi/delimitMate.git
+[submodule ".vim/bundle/autocomp.vim/plugin"]
+	path = .vim/bundle/autocomp.vim/plugin
+	url = http://github.com/andre-luiz-dos-santos/autocomp.git
+[submodule ".vim/bundle/css-color"]
+	path = .vim/bundle/css-color
+	url = http://github.com/skammer/vim-css-color.git
+[submodule ".vim/bundle/nerd-commenter"]
+	path = .vim/bundle/nerd-commenter
+	url = http://github.com/scrooloose/nerdcommenter.git
+[submodule ".vim/bundle/indexed-search"]
+	path = .vim/bundle/indexed-search
+	url = http://github.com/henrik/vim-indexed-search.git
+[submodule ".vim/bundle/tagbar"]
+	path = .vim/bundle/tagbar
+	url = http://github.com/majutsushi/tagbar.git
