@@ -1,0 +1,7 @@
+Setting up your Vim with git-sources:
+http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
+
+To update all plugins:
+
+cd <repoDir>
+git submodule foreach git pull origin master
