@@ -281,7 +281,7 @@ noremap <C-S-TAB> <C-W>W
 
 
 "switch between relativ and absolute line numbers - try it!
-nnoremap <leaer>l :call g:ToggleNuMode()<cr>
+nnoremap <leader>l :call g:ToggleNuMode()<cr>
 
 function! g:ToggleNuMode() 
 if(&rnu == 1) 
