@@ -55,3 +55,6 @@
 [submodule ".vim/bundle/tagbar"]
 	path = .vim/bundle/tagbar
 	url = http://github.com/majutsushi/tagbar.git
+[submodule ".vim/bundle/autocomplpopup"]
+	path = .vim/bundle/autocomplpopup
+	url = http://github.com/vim-scripts/AutoComplPop.git
