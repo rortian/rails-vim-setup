@@ -1,13 +1,22 @@
 " Needed on some linux distros.
 " see http://www.adamlowe.me/2009/12/vim-destroys-all-other-rails-editors.html
 
-" Show partial commands in the last line of the screen
-set showcmd
-
 " include bundle with pathogen
 filetype off
 call pathogen#infect()
 call pathogen#helptags()
+
+" These are highly recommended options.
+set enc=utf-8
+
+" be able to have hidden buffers
+set hidden
+
+" The set nocompatible setting makes vim behave in a more useful way
+set nocompatible
+
+" Show partial commands while typing
+set showcmd
 
 " Enable filetype-specific indenting and plugins
 filetype plugin indent on
@@ -29,8 +38,8 @@ set shortmess=atIoOTts
 " hightlight cursor line
 set cul
 
-" backspace and cursor can go lines up or own
-set whichwrap+=<,>,[,],h,l
+" not only backspace and cursor can go lines up or own
+set ww=<,>,[,],h,l
 
 " Stop certain movements from always going to the first character of a line.
 " While this behaviour deviates from that of Vi, it does what most users
@@ -88,14 +97,6 @@ set notimeout ttimeout ttimeoutlen=200
 " Copy to Clipboard (on Unix)
 set clipboard+=unnamed
 set clipboard+=+
-" These are highly recommended options.
-set enc=utf-8
-
-" be able to have hidden buffers
-set hidden
-
-" The set nocompatible setting makes vim behave in a more useful way
-set nocompatible
  
  
 " Turn syntax highlighting on
@@ -127,7 +128,12 @@ set expandtab
  
 " Set tabs
 set tabstop=2
+" Spaces feel like Tabs
+set softtabstop=2
 set shiftwidth=2
+
+" when at 3 spaces, and I hit tab go to 4, not 5
+set shiftround
 
 " remember more commands and search history
 set history=1000         
@@ -159,7 +165,8 @@ endif
 
 " highlight unwanted spaces
 set list
-set listchars=tab:>.,trail:.,extends:#,nbsp:.
+"set listchars=tab:▷ ,trail:⋅,nbsp:⋅
+set listchars=eol:¬,nbsp:⋅,tab:>-,trail:⋅,extends:>,precedes:<
 
 
 " MAPPINGS "
@@ -176,6 +183,10 @@ nmap <silent> <S-F5> :so $MYVIMRC<CR>
 
 " change the mapleader from \ to ,
 let mapleader=","
+
+" save with strg-s
+map <c-s> <esc>:w<cr>
+imap <c-s> <esc>:w<cr>a
 
 " Use Q for formatting the current paragraph (or selection)
 vmap Q gq
