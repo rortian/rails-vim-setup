@@ -61,3 +61,6 @@
 [submodule ".vim/bundle/tabbar"]
 	path = .vim/bundle/tabbar
 	url = http://github.com/vim-scripts/TabBar.git
+[submodule ".vim/bundle/Gundo"]
+	path = .vim/bundle/Gundo
+	url = http://github.com/vim-scripts/Gundo.git

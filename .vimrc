@@ -155,7 +155,7 @@ set nobackup
 set noswapfile
 
 if &t_Co >= 256 || has("gui_running")
-     colorscheme jellybeans
+     colorscheme lanai
 endif
 
 if &t_Co > 2 || has("gui_running")
@@ -278,6 +278,17 @@ map <c-right> <c-w>>
 noremap <C-TAB>   <C-W>w
 noremap <C-S-TAB> <C-W>W
 
+
+"switch between relativ and absolute line numbers - try it!
+nnoremap <leaer>l :call g:ToggleNuMode()<cr>
+
+function! g:ToggleNuMode() 
+if(&rnu == 1) 
+set nu 
+else 
+set rnu 
+endif 
+endfunc 
 
 
 
