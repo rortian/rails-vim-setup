@@ -48,7 +48,7 @@ set ww=<,>,[,],h,l
 set nostartofline
 
 " Use case insensitive search, except when using capital letters
-set ignorecase
+"set ignorecase
 set smartcase
 
 " --- Statusline Options
@@ -258,8 +258,11 @@ nmap <s-cr> o<Esc>0c$<Esc>k
 " Stay at this line and insert a new line above with CTRL Enter
 nmap <c-cr> O<Esc>0c$<Esc>j
 
-" display marks
-map <leader>m :marks<cr>
+" display marks and jump to entered number
+map <leader>m :marks<cr>:normal `
+
+"cd to Projects directory
+map <leader>d :cd ~/Projects/
 
 " save with strg-s
 map <c-s> <esc>:w<cr>
@@ -279,6 +282,8 @@ map <c-right> <c-w>>
 noremap <C-TAB>   <C-W>w
 noremap <C-S-TAB> <C-W>W
 
+" substitute word under cursor
+map <leader>s :%s/<c-r><c-w>//g<left><left>
 
 "switch between relativ and absolute line numbers - try it!
 nnoremap <leader>l :call g:ToggleNuMode()<cr>
@@ -295,7 +300,6 @@ endfunc
 "PLUGIN SETTINGS
 
 let g:SuperTabDefaultCompletionType = "context"
-
 
 
 " PLUGIN MAPPINGS
@@ -331,3 +335,14 @@ autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 "improve autocomplete menu color
 highlight Pmenu ctermbg=238 gui=bold
+
+
+" rails paths for gf to jump to classes
+map <F11> <Esc>:set suffixesadd=.rb<CR>gf
+map <F12> <Esc>:set suffixesadd=.html.erb<CR>gf
+set path+=~/Projects/core/app/**
+set path+=~Projects/core/lib/**
+set suffixesadd=.rb
+set includeexpr+=substitute(v:fname,'s$','','g')
+" or you can add substitution pattern s/ies$/y/g, s/ves$/f/g like this:
+" set includeexpr+=substitute(substitute(substitute(v:fname,'s$','','g'),'ie$','y','g'),'ve$','f','g')
