@@ -63,7 +63,7 @@
 	url = http://github.com/vim-scripts/TabBar.git
 [submodule ".vim/bundle/Gundo"]
 	path = .vim/bundle/Gundo
-	url = http://github.com/vim-scripts/Gundo.git
+	url = https://github.com/vim-scripts/Gundo.git
 [submodule ".vim/bundle/supertab"]
 	path = .vim/bundle/supertab
 	url = http://github.com/ervandew/supertab.git
