@@ -76,3 +76,9 @@
 [submodule ".vim/bundle/matchit"]
 	path = .vim/bundle/matchit
 	url = https://github.com/tsaleh/vim-matchit.git
+[submodule ".vim/bundle/jquery-doc"]
+	path = .vim/bundle/jquery-doc
+	url = https://github.com/lucapette/vim-jquery-doc.git
+[submodule ".vim/bundle/ruby-doc"]
+	path = .vim/bundle/ruby-doc
+	url = https://github.com/lucapette/vim-ruby-doc.git

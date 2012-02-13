@@ -27,7 +27,7 @@ set ofu=syntaxcomplete#Complete
 " Better command-line completion
 set wildmenu
 set wildignore+=*.pyc,*.zip,*.gz,*.bz,*.tar,*.jpg,*.png,*.gif,*.avi,*.wmv,*.ogg,*.mp3,*.mov,*.git*
-set wildmode=list:longest
+set wildmode=list:longest,full
 
 " Completion settings in insertmode
 set complete=.,w,b,t,i
@@ -304,6 +304,25 @@ let g:SuperTabDefaultCompletionType = "context"
 
 " PLUGIN MAPPINGS
 
+" rails
+" go to controller test etc
+map <leader>ra :A<cr>
+" go to controller helper etc
+map <leader>rr :R<cr>
+" open in browser
+map <leader>rp :Rpreview<space>
+
+map <leader>rf :find<space>
+map <leader>rc :Rcontroller<cr>
+map <leader>rh :Rhelper<cr>
+map <leader>rl :Rlayout<cr>
+map <leader>rd :Rmigration<cr>
+map <leader>rm :Rmodel<cr>
+map <leader>rs :Rstylesheet<cr>
+map <leader>rv :Rview<cr>
+map <leader>rj :Rjavascript<cr>
+map <leader>re :Rextract<space>
+
 " Tagbar
 nnoremap <silent> <F8> :TagbarToggle<cr>
 
@@ -314,7 +333,7 @@ map <leader>n :NERDTreeToggle<CR>
 map <leader>g :GundoToggle<cr>
 
 " most recent files
-map <leader>r :Mru<cr>
+map <leader>ru :Mru<cr>
 
 " show yankring
 nmap <leader>ys :YRShow<cr>
