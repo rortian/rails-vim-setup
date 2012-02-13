@@ -22,7 +22,7 @@ set showcmd
 filetype plugin indent on
 
 " ##### COMPLETION
-set ofu=syntaxcomplete#Complete
+"set ofu=syntaxcomplete#Complete
 
 " Better command-line completion
 set wildmenu
@@ -273,17 +273,23 @@ nmap <m-h> :bp<cr>
 nmap <m-l> :bn<cr>
 
 " Window resizing mappings
-map - <C-W>-
-map + <C-W>+
-map <c-left> <c-w><
-map <c-right> <c-w>>
+map <up> <C-W>-
+map <down> <C-W>+
+map <left> <c-w><
+map <right> <c-w>>
 
-" cicle through windows with ctrl tab
-noremap <C-TAB>   <C-W>w
-noremap <C-S-TAB> <C-W>W
+" kill window
+map <leader>a <c-w>c
+
+" cicle through windows with tab
+noremap <TAB>   <C-W>w
+noremap <S-TAB> <C-W>W
 
 " substitute word under cursor
 map <leader>s :%s/<c-r><c-w>//g<left><left>
+
+"show register contents
+"map <leader>. :reg<cr>
 
 "switch between relativ and absolute line numbers - try it!
 nnoremap <leader>l :call g:ToggleNuMode()<cr>
@@ -299,8 +305,12 @@ endfunc
 
 "PLUGIN SETTINGS
 
+let g:acp_completeOption = '.,w,b,t,i,k'
+
 let g:SuperTabDefaultCompletionType = "context"
 
+" i want to switch windows with ctrl tab, not buffers
+let g:Tb_cTabSwitchBufs = 0
 
 " PLUGIN MAPPINGS
 
@@ -323,20 +333,28 @@ map <leader>rv :Rview<cr>
 map <leader>rj :Rjavascript<cr>
 map <leader>re :Rextract<space>
 
+" command t
+
+nnoremap <silent> <Leader><leader> :CommandT<CR>
+nnoremap <silent> <Leader><space> :CommandTBuffer<CR>
+
+" zoomwindow toggle
+map <leader>o :ZoomWin<cr>
+
 " Tagbar
-nnoremap <silent> <F8> :TagbarToggle<cr>
+nnoremap <silent> <leader>t :TagbarToggle<cr>
 
 " NERDTree
 map <leader>n :NERDTreeToggle<CR>
 
 " toggle the Gundo window
-map <leader>g :GundoToggle<cr>
+map <leader>u :GundoToggle<cr>
 
 " most recent files
-map <leader>ru :Mru<cr>
+map <leader><enter> :Mru<cr>
 
 " show yankring
-nmap <leader>ys :YRShow<cr>
+nmap <leader>y :YRShow<cr>
 
 " FILE TYPE SETTINGS
 "
@@ -346,6 +364,7 @@ autocmd filetype php set expandtab
 " RoR
 let g:rubycomplete_rails = 1
 autocmd FileType html set filetype=html.eruby-rails.eruby
+autocmd FileType eruby set filetype=html.eruby-rails.eruby
 autocmd FileType ruby set filetype=ruby.ruby-rails
 "ruby
 autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
@@ -365,3 +384,10 @@ set suffixesadd=.rb
 set includeexpr+=substitute(v:fname,'s$','','g')
 " or you can add substitution pattern s/ies$/y/g, s/ves$/f/g like this:
 " set includeexpr+=substitute(substitute(substitute(v:fname,'s$','','g'),'ie$','y','g'),'ve$','f','g')
+
+" omnicompletion
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP

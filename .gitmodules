@@ -88,3 +88,9 @@
 [submodule ".vim/bundle/zoomwin"]
 	path = .vim/bundle/zoomwin
 	url = https://github.com/vim-scripts/ZoomWin.git
+[submodule ".vim/bundle/autocompl"]
+	path = .vim/bundle/autocompl
+	url = https://github.com/vim-scripts/AutoComplPop.git
+[submodule ".vim/bundle/align"]
+	path = .vim/bundle/align
+	url = https://github.com/vim-scripts/Align.git
