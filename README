@@ -1,6 +1,12 @@
 Setting up your Vim with git-sources:
 http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
 
+
+To install submodules:
+cd <repoDir>
+git submodule init
+git submodule update
+
 To update all plugins:
 
 cd <repoDir>
