@@ -85,3 +85,6 @@
 [submodule ".vim/bundle/bufkill"]
 	path = .vim/bundle/bufkill
 	url = https://github.com/vim-scripts/bufkill.vim.git
+[submodule ".vim/bundle/zoomwin"]
+	path = .vim/bundle/zoomwin
+	url = https://github.com/vim-scripts/ZoomWin.git

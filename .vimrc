@@ -48,7 +48,7 @@ set ww=<,>,[,],h,l
 set nostartofline
 
 " Use case insensitive search, except when using capital letters
-"set ignorecase
+set ignorecase
 set smartcase
 
 " --- Statusline Options
