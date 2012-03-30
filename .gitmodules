@@ -40,9 +40,6 @@
 [submodule ".vim/bundle/delimitMate"]
 	path = .vim/bundle/delimitMate
 	url = http://github.com/Raimondi/delimitMate.git
-[submodule ".vim/bundle/autocomp.vim/plugin"]
-	path = .vim/bundle/autocomp.vim/plugin
-	url = http://github.com/andre-luiz-dos-santos/autocomp.git
 [submodule ".vim/bundle/css-color"]
 	path = .vim/bundle/css-color
 	url = http://github.com/skammer/vim-css-color.git
@@ -55,9 +52,6 @@
 [submodule ".vim/bundle/tagbar"]
 	path = .vim/bundle/tagbar
 	url = http://github.com/majutsushi/tagbar.git
-[submodule ".vim/bundle/autocomplpopup"]
-	path = .vim/bundle/autocomplpopup
-	url = http://github.com/vim-scripts/AutoComplPop.git
 [submodule ".vim/bundle/tabbar"]
 	path = .vim/bundle/tabbar
 	url = http://github.com/vim-scripts/TabBar.git
@@ -88,9 +82,9 @@
 [submodule ".vim/bundle/zoomwin"]
 	path = .vim/bundle/zoomwin
 	url = https://github.com/vim-scripts/ZoomWin.git
-[submodule ".vim/bundle/autocompl"]
-	path = .vim/bundle/autocompl
-	url = https://github.com/vim-scripts/AutoComplPop.git
 [submodule ".vim/bundle/align"]
 	path = .vim/bundle/align
 	url = https://github.com/vim-scripts/Align.git
+[submodule ".vim/bundle/autocomplpop"]
+	path = .vim/bundle/autocomplpop
+	url = https://github.com/vim-scripts/AutoComplPop.git

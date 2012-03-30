@@ -172,6 +172,7 @@ set listchars=eol:¬,nbsp:⋅,tab:>-,trail:⋅,extends:>,precedes:<
 
 " MAPPINGS "
 
+map <F8> :set tags=~/Dropbox/aktuell/tags<cr>
 " get out of insert mode
 imap jk <Esc>
 
@@ -359,11 +360,13 @@ nmap <leader>y :YRShow<cr>
 " FILE TYPE SETTINGS
 "
 " PHP Settings
-autocmd filetype php set expandtab
+autocmd filetype php set noet
+autocmd filetype php set ts=4
+autocmd filetype php set ft=python.django
 
 " RoR
 let g:rubycomplete_rails = 1
-autocmd FileType html set filetype=html.eruby-rails.eruby
+autocmd FileType html set filetype=html.eruby-rails.eruby.htmldjango
 autocmd FileType eruby set filetype=html.eruby-rails.eruby
 autocmd FileType ruby set filetype=ruby.ruby-rails
 "ruby
@@ -391,3 +394,6 @@ autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+set makeprg=pylint\ --reports=n\ --output-format=parseable\ %:p
+set errorformat+=%*[\"]%f%*[\"]\\,\ line\ %l:\ %m
