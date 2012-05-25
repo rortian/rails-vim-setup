@@ -37,7 +37,7 @@ set complete=.,w,b,t,i
 set shortmess=atIoOTts
 
 " hightlight cursor line
-set cul
+" set cul
 
 " not only backspace and cursor can go lines up or own
 set ww=<,>,[,],h,l
@@ -167,7 +167,7 @@ endif
 " highlight unwanted spaces
 set list
 "set listchars=tab:▷ ,trail:⋅,nbsp:⋅
-set listchars=eol:¬,nbsp:⋅,tab:>-,trail:⋅,extends:>,precedes:<
+set listchars=nbsp:⋅,tab:>-,trail:⋅,extends:>,precedes:<
 
 
 " MAPPINGS "
